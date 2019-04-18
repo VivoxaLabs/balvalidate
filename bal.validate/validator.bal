@@ -24,11 +24,11 @@ public function isInteger(string input) returns boolean {
 
 # Check whether @tainted string is an email
 #
-# + str - @tainted string
+# + input - @tainted string
 # + return - Return true if str is a valid e-mail address
-public function isAnEmail(string str) returns boolean {
+public function isAnEmail(string input) returns boolean {
     string regex = "[A-Za-z0-9.-]+@[A-Za-z0-9.-]+";
-    boolean|error isEmail = str.matches(regex);
+    boolean | error isEmail = input.matches(regex);
     if (isEmail is error) {
         panic isEmail;
     } else {
