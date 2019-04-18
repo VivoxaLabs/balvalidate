@@ -11,8 +11,6 @@ service hello on new http:Listener(9090) {
 
         response.setTextPayload("Hello Ballerina!");
 
-
-
         _ = caller -> respond(response);
     }
 }
@@ -21,5 +19,5 @@ service hello on new http:Listener(9090) {
 public function main() {
     
     // calling validator
-    io:println(validate:isValidInteger());
+    io:println(validate:isValidInteger(100));
 }
