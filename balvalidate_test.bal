@@ -19,13 +19,18 @@ service hello on new http:Listener(9090) {
         var getParas = request.getQueryParams();
         var idNumber = getParas.idNumber;
 
-        if (validate:isInteger(idNumber)){
-            response.setTextPayload(untaint idNumber, contentType = "text/plain");
-        }
+        // if (validate:isInteger(idNumber)){
+        //     response.setTextPayload(untaint idNumber, contentType = "text/plain");
+        // }
 
         // test request powershell:
         // Invoke-WebRequest -Uri http://127.0.0.1:9090/hello/sayHello?idNumber=fadfasdf
-        
+
+        if (validate:isValidEmail(getParas.idNumber)){
+            response.setTextPayload(untaint idNumber, contentType = "text/plain");
+        }
+
+
         _ = caller -> respond(response);
     }
 }

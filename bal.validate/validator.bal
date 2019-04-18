@@ -3,7 +3,7 @@
 
 // ToDo:
 // Add validation methods for 
-// String, Integer, Email Addr etc.
+// String, Email Addr etc.
 
 import ballerina/io;
 
@@ -11,7 +11,7 @@ import ballerina/io;
 # Check whether @tainted string contains an Integer value
 #
 # + input - @tainted string  
-# + return - true if str contains a Integer value
+# + return - Return true if str contains an Integer value
 public function isInteger(string input) returns boolean {
     boolean | error isInt = input.matches("\\d+");
     if (isInt is error) {
@@ -21,9 +21,14 @@ public function isInteger(string input) returns boolean {
     }
 }
 
-public function isValidEmail(string input) returns boolean {
-    string regex = "";
-    boolean|error isEmail = input.matches(regex);
+
+# Check whether @tainted string is an email
+#
+# + str - @tainted string
+# + return - Return true if str is a valid e-mail address
+public function isAnEmail(string str) returns boolean {
+    string regex = "[A-Za-z0-9.-]+@[A-Za-z0-9.-]+";
+    boolean|error isEmail = str.matches(regex);
     if (isEmail is error) {
         panic isEmail;
     } else {
