@@ -1,5 +1,5 @@
 # balvalidate
-Basic data validator module for Ballerina 
+The balvalidate allows you to validate emails, strings, integer, and phone numbers. You can also validate so many things.
 
 ## References
 https://ballerina.io/learn/how-to-write-secure-ballerina-code/ 
