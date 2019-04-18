@@ -10,22 +10,29 @@ string SAMPLE_STRING = "balvalidate";
 string SAMPLE_EMAIL = "balvalidate@vivoxalabs.com";
 string SAMPLE_PHONENUMBER = "000-1111111";
 
-// commented for better performence in testing
-// service hello on new http:Listener(9090) {
+service hello on new http:Listener(9090) {
 
-//     resource function sayHello(http:Caller caller, http:Request request) {
+    resource function sayHello(http:Caller caller, http:Request request) {
 
-//         http:Response response = new;
+        http:Response response = new;
 
-//         response.setTextPayload("Hello Ballerina!");
+        var getParas = request.getQueryParams();
+        var idNumber = getParas.idNumber;
 
-//         _ = caller -> respond(response);
-//     }
-// }
+        if (validate:isInteger(idNumber)){
+            response.setTextPayload(untaint idNumber, contentType = "text/plain");
+        }
+
+        // test request powershell:
+        // Invoke-WebRequest -Uri http://127.0.0.1:9090/hello/sayHello?idNumber=fadfasdf
+        
+        _ = caller -> respond(response);
+    }
+}
 
 
 public function main() {
     
     // calling validator
-    io:println(validate:isInteger(SAMPLE_STRINGINT));
+    //io:println(validate:isInteger(SAMPLE_STRINGINT));
 }
