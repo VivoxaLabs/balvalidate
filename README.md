@@ -1,6 +1,12 @@
 # balvalidate
 Basic data validator module for Ballerina 
 
+## References
+https://ballerina.io/learn/how-to-write-secure-ballerina-code/
+https://www.youtube.com/watch?v=GmIZVwc15bE
+
+<br><br>
+
 ## Compatibility
 | Ballerina Language Version |  API version  |
 | -------------------------- | -------------------- |
@@ -17,3 +23,4 @@ Clone the repository by running the following command
 ```shell
 git clone https://github.com/VivoxaLabs/balvalidate.git
 ```
+
