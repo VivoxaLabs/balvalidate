@@ -3,6 +3,13 @@ import ballerina/io;
 
 import bal.validate;
 
+//Sample Data
+int SAMPLE_INTEGER = 100;
+string SAMPLE_STRINGINT = "100";
+string SAMPLE_STRING = "balvalidate";
+string SAMPLE_EMAIL = "balvalidate@vivoxalabs.com";
+string SAMPLE_PHONENUMBER = "000-1111111";
+
 // commented for better performence in testing
 // service hello on new http:Listener(9090) {
 
@@ -20,7 +27,5 @@ import bal.validate;
 public function main() {
     
     // calling validator
-    //io:println(validate:isValidInteger(100));
-
-    io:println(validate:isInteger("111"));
+    io:println(validate:isInteger(SAMPLE_STRINGINT));
 }

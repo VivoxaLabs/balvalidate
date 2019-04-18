@@ -10,17 +10,15 @@ import ballerina/io;
 
 # Check whether @tainted string contains an Integer value
 #
-# + str - @tainted string  
+# + input - @tainted string  
 # + return - true if str contains a Integer value
-public function isInteger(string str) returns boolean {
-
-    boolean | error is_int = str.matches("\\d+");
-    if (is_int is error) {
-        panic is_int;
+public function isInteger(string input) returns boolean {
+    boolean | error isInt = input.matches("\\d+");
+    if (isInt is error) {
+        panic isInt;
     } else {
-        return is_int;
+        return isInt;
     }
-    
 }
 
 public function isValidEmail(string input) returns boolean {
