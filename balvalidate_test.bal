@@ -26,9 +26,11 @@ service hello on new http:Listener(9090) {
         // test request powershell:
         // Invoke-WebRequest -Uri http://127.0.0.1:9090/hello/sayHello?idNumber=fadfasdf
 
-        if (validate:isValidEmail(getParas.idNumber)){
-            response.setTextPayload(untaint idNumber, contentType = "text/plain");
-        }
+        // if (validate:isValidEmail(getParas.idNumber)){
+        //     response.setTextPayload(untaint idNumber, contentType = "text/plain");
+        // }
+
+        response.setTextPayload(validate:removeSpecialChars(idNumber), contentType = "text/plain");
 
 
         _ = caller -> respond(response);

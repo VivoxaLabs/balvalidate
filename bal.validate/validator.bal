@@ -36,6 +36,18 @@ public function isAnEmail(string input) returns boolean {
     }
 }
 
+
+# Remove all special characters of given @tainted string
+#
+# + input - @tainted string
+# + return - Return @untainted string with only [A-Za-z0-9]
+public function removeSpecialChars(string input) returns @untainted string{
+    string regex = "[^A-Za-z0-9]";
+    string cleanInput = input.replaceAll(regex, "");
+    return cleanInput;
+}
+
+
 public function isValidPhoneNumber() returns boolean {
     return true;
 }
