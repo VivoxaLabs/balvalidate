@@ -1,6 +1,13 @@
 # balvalidate
 The balvalidate allows you to validate emails, strings, integer, and phone numbers. You can also validate so many things.
 
+## References
+https://ballerina.io/learn/how-to-write-secure-ballerina-code/ 
+<br>
+https://www.youtube.com/watch?v=GmIZVwc15bE
+
+<br><br>
+
 ## Compatibility
 | Ballerina Language Version |  API version  |
 | -------------------------- | -------------------- |
@@ -17,3 +24,4 @@ Clone the repository by running the following command
 ```shell
 git clone https://github.com/VivoxaLabs/balvalidate.git
 ```
+

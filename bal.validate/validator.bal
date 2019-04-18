@@ -6,22 +6,21 @@
 // String, Integer, Email Addr etc.
 
 import ballerina/io;
-import ballerina/mysql;
 
 
-// sample func, not implemeted yet
-# Description
+# Check whether @tainted string contains an Integer value
 #
-# + input - input Parameter Description 
-# + return - Return Value Description
-public function isValidInteger(int input) returns boolean {
-    string regEx = "?<=\s|^)\d+(?=\s|$";
-    // boolean|error isInt = input.matches(regEx);
-    // if (isInt is error) {
-    //     panic isInt;
-    // } else {
-    //     return isInt;
-    // }
+# + str - @tainted string  
+# + return - true if str contains a Integer value
+public function isInteger(string str) returns boolean {
+
+    boolean | error is_int = str.matches("\\d+");
+    if (is_int is error) {
+        panic is_int;
+    } else {
+        return is_int;
+    }
+    
 }
 
 public function isValidEmail(string input) returns boolean {
