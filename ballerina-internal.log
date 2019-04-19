@@ -1,0 +1,70 @@
+[2019-04-19 00:10:03,291] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-04-19 00:10:20,096] ERROR {org.wso2.transport.http.netty.contractimpl.listener.WebSocketServerHandshakeHandler} - Error during WebSocket server handshake 
+java.io.IOException: An established connection was aborted by the software in your host machine
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1108)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:345)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:126)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Unknown Source)
+ 
+[2019-04-19 00:10:24,144] ERROR {org.wso2.transport.http.netty.contractimpl.listener.WebSocketServerHandshakeHandler} - Error during WebSocket server handshake 
+java.io.IOException: An established connection was aborted by the software in your host machine
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1108)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:345)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:126)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Unknown Source)
+ 
+[2019-04-19 00:10:36,550] ERROR {org.wso2.transport.http.netty.contractimpl.listener.WebSocketServerHandshakeHandler} - Error during WebSocket server handshake 
+java.io.IOException: An established connection was aborted by the software in your host machine
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(Unknown Source)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(Unknown Source)
+	at sun.nio.ch.IOUtil.read(Unknown Source)
+	at sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1108)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:345)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:126)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Unknown Source)
+ 
+[2019-04-19 06:52:54,689] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'idNumber'  
+[2019-04-19 07:12:07,918] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'idNumber'  
+[2019-04-19 07:12:32,892] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'idNumber'  
+[2019-04-19 07:12:39,315] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'idNumber'  
+[2019-04-19 07:13:59,266] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'idNumber'  
+[2019-04-19 07:14:07,724] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'idNumber'  
+[2019-04-19 07:14:41,608] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'idNumber'  
+[2019-04-19 07:16:59,968] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'idNumber'  
+[2019-04-19 07:17:39,422] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'idNumber'  
+[2019-04-19 07:17:49,786] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'idNumber'  
+[2019-04-19 07:17:58,808] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'idNumber'  
+[2019-04-19 07:17:59,392] ERROR {org.ballerinalang.net.http.HttpUtil} - {ballerina}KeyNotFound:cannot find key 'idNumber'  
