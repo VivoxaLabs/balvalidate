@@ -17,7 +17,7 @@ service hello on new http:Listener(9090) {
         http:Response response = new;
 
         var getParas = request.getQueryParams();
-        var idNumber = getParas.idNumber;
+        //var idNumber = getParas.idNumber;
 
         // if (validate:isInteger(idNumber)){
         //     response.setTextPayload(untaint idNumber, contentType = "text/plain");
@@ -30,7 +30,7 @@ service hello on new http:Listener(9090) {
         //     response.setTextPayload(untaint idNumber, contentType = "text/plain");
         // }
 
-        response.setTextPayload(validate:removeSpecialChars(idNumber), contentType = "text/plain");
+        //response.setTextPayload(validate:removeSpecialChars(idNumber), contentType = "text/plain");
 
 
         _ = caller -> respond(response);
@@ -42,4 +42,8 @@ public function main() {
     
     // calling validator
     //io:println(validate:isInteger(SAMPLE_STRINGINT));
+
+    boolean s = validate:isValidPhoneNumber("+94558965547", 94, 9);
+    io:println(s);
+
 }

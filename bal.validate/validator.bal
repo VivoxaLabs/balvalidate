@@ -25,8 +25,8 @@ public function isInteger(string input) returns boolean {
 # Check whether @tainted string is an email
 #
 # + input - @tainted string
-# + return - Return true if str is a valid e-mail address
-public function isAnEmail(string input) returns boolean {
+# + return - Return true if input is a valid e-mail address
+public function isValidEmail(string input) returns boolean {
     string regex = "[A-Za-z0-9.-]+@[A-Za-z0-9.-]+";
     boolean | error isEmail = input.matches(regex);
     if (isEmail is error) {
@@ -34,6 +34,27 @@ public function isAnEmail(string input) returns boolean {
     } else {
         return isEmail;
     }
+}
+
+
+# Check whether @tainted string is a phone number
+#
+# + input - @tainted string 
+# + countryCode - Country Code (ex: 1) 
+# + length - Number length without country code
+# + return - Return true if input is a valid phone number
+public function isValidPhoneNumber(string input, int countryCode, int length) returns boolean {
+    string regex = "[+]" + <string> countryCode + "[0-9]{" + <string> length + "}";
+    boolean | error isPhoneNo = input.matches(regex);
+    if (isPhoneNo is error){
+        panic isPhoneNo;
+    } else {
+        return isPhoneNo;
+    }
+}
+
+public function isValidString() returns boolean {
+    return true;
 }
 
 
@@ -45,13 +66,4 @@ public function removeSpecialChars(string input) returns @untainted string{
     string regex = "[^A-Za-z0-9]";
     string cleanInput = input.replaceAll(regex, "");
     return cleanInput;
-}
-
-
-public function isValidPhoneNumber() returns boolean {
-    return true;
-}
-
-public function isValidString() returns boolean {
-    return true;
 }
