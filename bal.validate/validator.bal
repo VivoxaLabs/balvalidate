@@ -1,10 +1,4 @@
-
 // This module is used for validating data.
-
-// ToDo:
-// Add validation methods for 
-// String, Email Addr etc.
-
 import ballerina/io;
 
 
