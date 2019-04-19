@@ -13,7 +13,7 @@ import ballerina/io;
 # + input - @tainted string  
 # + return - Return true if str contains an Integer value
 public function isInteger(string input) returns boolean {
-    boolean | error isInt = input.matches("\\d+");
+    boolean | error isInt = input.matches("[0-9]+");
     if (isInt is error) {
         panic isInt;
     } else {
@@ -53,8 +53,19 @@ public function isValidPhoneNumber(string input, int countryCode, int length) re
     }
 }
 
-public function isValidString() returns boolean {
-    return true;
+
+# Check whether @tainted string is a valid URL
+#
+# + input - @tainted string 
+# + return - Return true if input is a valid URL
+public function isValidURL(string input) returns boolean {
+    string regex = "http(s)?://[A-Za-z0-9-]+[.][A-Za-z0-9.]+[A-Za-z-0-9._~:/?#@!$&'()*,;=]+";
+    boolean | error isURL = input.matches(regex);
+    if (isURL is error){
+        panic isURL;
+    } else {
+        return isURL;
+    }
 }
 
 
