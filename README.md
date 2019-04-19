@@ -24,4 +24,7 @@ Clone the repository by running the following command
 ```shell
 git clone https://github.com/VivoxaLabs/balvalidate.git
 ```
-
+Run the testing file by running the following command
+```ballerina
+ballerina run balvalidate_test.bal
+```
