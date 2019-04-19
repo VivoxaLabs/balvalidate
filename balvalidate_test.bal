@@ -43,7 +43,15 @@ public function main() {
     // calling validator
     //io:println(validate:isInteger(SAMPLE_STRINGINT));
 
-    boolean s = validate:isValidPhoneNumber("+94558965547", 94, 9);
-    io:println(s);
+    // boolean s = validate:isValidPhoneNumber("+94558965547", 94, 9);
+    // io:println(s);
+    // string sd = "dsdf";
 
+    while (true){
+        string d = io:readln("a");
+        boolean e = validate:isValidURL(d);
+        io:println(e);
+    }
+
+    
 }
